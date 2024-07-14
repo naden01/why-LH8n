@@ -1,0 +1,10 @@
+# Another Props
+ro.crypto.volume.filenames_mode=aes-256-cts
+
+# MtkBoard
+ro.mediatek.platform=mt6833
+ro.hardware=mt6833
+
+# Board
+ro.product.device=LH8n
+ro.build.product=LH8n
