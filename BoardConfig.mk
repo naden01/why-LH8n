@@ -139,6 +139,10 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
+TW_NO_SCREEN_BLANK := true
+TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_MAX_BRIGHTNESS := 4000
+TW_DEFAULT_BRIGHTNESS := 1200
 
 # For debugging
 TWRP_INCLUDE_LOGCAT := true
