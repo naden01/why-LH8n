@@ -171,3 +171,18 @@ TW_DEFAULT_BRIGHTNESS := 1200
 # For debugging
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+
+# Treble
+PB_DISABLE_DEFAULT_TREBLE_COMP := true
+
+# Maintainer Flags
+MAINTAINER := 'kelvin'
+
+# Treble
+PB_DISABLE_DEFAULT_DM_VERITY := true
+
+# Torch
+PB_TORCH_PATH := "/sys/devices/platform/flashlights_ocp8132/torch_brightness"
+
+# Disable AVB2.0
+PB_DISABLE_DEFAULT_PATCH_AVB2 := true
