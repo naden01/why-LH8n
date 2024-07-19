@@ -18,8 +18,12 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-service
 
+PRODUCT_PACKAGES_DEBUG += \
+    bootctrl 
+
 PRODUCT_PACKAGES += \
-    bootctrl.mt6833
+    bootctrl.mt6833 \
+    bootctrl.mt6833.recovery
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
