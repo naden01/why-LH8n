@@ -84,9 +84,6 @@ BOARD_MAIN_PARTITION_LIST := \
     vendor_dlkm \
     odm_dlkm
 
-TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
-
 # Platform
 TARGET_BOARD_PLATFORM := mt6833
 
