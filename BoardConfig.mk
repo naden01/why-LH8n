@@ -127,7 +127,6 @@ TARGET_COPY_OUT_SYSTEM := system
 
 # System as root
 BOARD_SUPPRESS_SECURE_ERASE := true
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Verified Boot
