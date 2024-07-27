@@ -23,18 +23,12 @@ on:
         description: 'DEVICE_PATH'
         required: true
         default: 'device/tecno/LH8n'
-      COMMON_TREE_URL:
-        description: 'COMMON_TREE_URL (if no common tree, leave blank)'
-        required: false
-      COMMON_PATH:
-        description: 'COMMON_PATH (if no common tree, leave blank)'
-        required: false
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
         default: 'LH8n'
       MAKEFILE_NAME:
-        description: 'MAKEFILE_NAME'
+        description: 'twrp_DEVNAME'
         required: true
         default: 'twrp_LH8n'
       BUILD_TARGET:
@@ -115,15 +109,7 @@ jobs:
       run: |
         git clone ${{ github.event.inputs.DEVICE_TREE_URL }} -b ${{ github.event.inputs.DEVICE_TREE_BRANCH }} ./${{ github.event.inputs.DEVICE_PATH }}
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
-
-    - name: Clone common tree
-      if: |
-        github.event.inputs.COMMON_TREE_URL != null
-        && github.event.inputs.COMMON_PATH != null
-      run: |
-        git clone ${{ github.event.inputs.COMMON_TREE_URL }} -b ${{ github.event.inputs.DEVICE_TREE_BRANCH }} ./${{ github.event.inputs.COMMON_PATH }}
-      working-directory: ${{ steps.pwd.outputs.workspace-folder }}
-
+      
     - name: Check Build Tree
       uses: haya14busa/action-cond@v1
       id: buildtree
@@ -144,7 +130,7 @@ jobs:
       with:
         swap-size-gb: 12
 
-    - name: Building recovery
+    - name: Building...
       run: |
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
