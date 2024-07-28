@@ -97,9 +97,6 @@ TARGET_NO_BOOTLOADER := true
 # Display
 TARGET_SCREEN_DENSITY := 480
 
-# Treble
-BOARD_VNDK_VERSION := current
-
 # MTK Hardware
 BOARD_HAS_MTK_HARDWARE := true
 BOARD_USES_MTK_HARDWARE := true
