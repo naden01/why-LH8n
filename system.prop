@@ -1,10 +1,8 @@
-# Another Props
+# crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
 
-# MtkBoard
-ro.mediatek.platform=mt6833
-ro.hardware=mt6833
-
-# Board
-ro.product.device=LH8n
-ro.build.product=LH8n
+#something
+ro.vendor.mtk_tee_gp_support=1
+ro.hardware.kmsetkey=trustonic
+ro.vendor.mtk_trustonic_tee_support=1
+ro.hardware.gatekeeper=trustonic
