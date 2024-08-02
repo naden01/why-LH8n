@@ -12,7 +12,30 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Virtual A/B
 ENABLE_VIRTUAL_AB := true
+AB_OTA_UPDATER := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
+# A/B
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    gz \
+    lk \
+    logo \
+    md1img \
+    preloader \
+    product \
+    scp \
+    spmfw \
+    sspm \
+    system \
+    system_ext \
+    tee \
+    vbmeta \
+    vbmeta_system \
+    vbmeta_vendor \
+    vendor \
+    vendor_boot
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -45,6 +68,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
+
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
 
 # Health HAL
 PRODUCT_PACKAGES += \
