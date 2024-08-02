@@ -15,17 +15,6 @@ BUILD_BROKEN_PREBUILT_ELF_FILES := true
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 SOONG_ALLOW_MISSING_DEPENDENCIES := true
 
-# A/B
-AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS += \
-    vendor \
-    system \
-    boot \
-    vbmeta_system \
-    product \
-    vbmeta_vendor \
-    system_ext
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -97,11 +86,15 @@ BOARD_MAIN_PARTITION_LIST := \
     vendor_dlkm \
     odm_dlkm
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := LH8n
+
 # Platform
-TARGET_BOARD_PLATFORM := mt6833
+TARGET_BOARD_PLATFORM := $(PRODUCT_PLATFORM)
+PRODUCT_PLATFORM := mt6833
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := LH8n
+TARGET_BOOTLOADER_BOARD_NAME := $(TARGET_OTA_ASSERT_DEVICE)
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
