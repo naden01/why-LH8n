@@ -10,12 +10,6 @@ LOCAL_PATH := device/tecno/LH8n
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 31
-
-# API levels
-PRODUCT_SHIPPING_API_LEVEL := 31
-
 # Virtual A/B
 ENABLE_VIRTUAL_AB := true
 AB_OTA_UPDATER := true
